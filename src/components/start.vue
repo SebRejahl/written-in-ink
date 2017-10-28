@@ -9,7 +9,7 @@ export default {
   name: 'start',
   data () {
     return {
-      msg: 'Our web site is coming soon...'
+      msg: 'Our web site is coming very soon...'
     }
   }
 }
