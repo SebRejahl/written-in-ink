@@ -9,7 +9,6 @@
                       :interval="4000"
                       img-width="1024"
                       img-height="480"
-                      v-model="slide"
                       @sliding-start="onSlideStart"
                       @sliding-end="onSlideEnd">
         <b-carousel-slide img-src="/static/05.JPG"></b-carousel-slide>
@@ -21,7 +20,22 @@
 
       </b-carousel>
     </div>
+    <div class="upcoming-events" id="upcoming-events">
+      <h1 class="wii-h">Upcoming Events</h1>
+      <b-card  bg-variant="dark" text-variant="white" title="Card Title" class="event">
+        <p class="card-text">
+          With supporting text below as a natural lead-in to additional content.
+        </p>
+        <b-button href="#" variant="primary">Go somewhere</b-button>
+      </b-card>
+    </div>
+    <div class="Our Music" id="our-music">
+      <h1 class="wii-h">Our Music</h1>
+      <youtube :video-id="video_1"></youtube>
+      <youtube :video-id="video_2"></youtube>
+    </div>
     <div class="social-media" id="social-media">
+      <h1 class="wii-h">Social Media</h1>
       <a href="https://www.facebook.com/writtenininkband/">
         <i class="fa fa-facebook-square fa-4x social-link" aria-hidden="true"></i>
       </a>
@@ -40,11 +54,22 @@
 </template>
 
 <script>
+import { getIdFromURL, getTimeFromURL } from 'vue-youtube-embed'
+
 export default {
   name: 'start',
   data () {
     return {
-      msg: 'Our web site is coming very soon...'
+      video_1: "MJ7GiQA1ya4",
+      video_2: "dBkXdInVeBA"
+    }
+  },
+  methods: {
+    onSlideStart: function() {
+
+    },
+    onSlideEnd: function() {
+
     }
   }
 }
@@ -52,6 +77,12 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.wii-h {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Permanent Marker', cursive;
+  color: black;
+}
 h1, h2 {
   font-weight: normal;
 }
@@ -86,7 +117,16 @@ a {
 
 .social-media {
   padding-top: 100px;
-  padding-bottom: 100px
+  padding-bottom: 100px;
+  height: 800px;
+}
+
+.upcoming-events {
+  text-align: center;
+  display: inline-block;
+}
+
+.event {
 }
 
 </style>
