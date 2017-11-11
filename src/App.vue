@@ -11,7 +11,7 @@
       <b-collapse is-nav id="nav_collapse">
 
         <b-nav is-nav-bar>
-          <b-nav-item id="link" href="#upcoming-events">Upcoming Events</b-nav-item>
+          <b-nav-item id="link" href="#upcoming-events"><span id="link">Upcoming Events</span></b-nav-item>
           <b-nav-item href="#our-music">Our Music</b-nav-item>
           <b-nav-item href="#social-media">Social Media</b-nav-item>
         </b-nav>
@@ -31,6 +31,7 @@ export default {
         if (window.pageYOffset > 100) {
           document.getElementById('nav').classList.add("scroll-down");
           document.getElementById('logo').classList.add("scroll-down-logo");
+          document.getElementById('link').classList.add("scroll-down-link");
         } else if (window.pageYOffset < 50){
           document.getElementById('nav').classList.remove("scroll-down");
           document.getElementById('logo').classList.remove("scroll-down-logo");
@@ -55,19 +56,26 @@ destroyed: function () {
   margin-top: 0px;
 }
 .navbar-wii {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .navbar-wii .navbar-nav .nav-link {
-  color: #a21919;
+  color: black;
   font-size: 24px;
   font-family: 'Permanent Marker', cursive;
   margin-left: 30px;
 }
 
+.navbar-wii .navbar-nav .nav-link:hover {
+}
+
 .scroll-down-logo {
   width: 100px;
   height: auto;
+}
+
+.scroll-down-link {
+  color: black;
 }
 
 .scroll-down {
