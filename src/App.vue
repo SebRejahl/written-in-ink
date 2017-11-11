@@ -26,8 +26,22 @@
 
 <script>
 export default {
-  name: 'app'
+  name: 'app',
+  methods: {
+      handleScroll: function (event) {
+        if (window.pageYOffset > 100) {
+          document.getElementById('nav').classList.add("scroll-down");
+        } else if (window.pageYOffset < 50){
+          document.getElementById('nav').classList.remove("scroll-down");
+        }
+      }
 }
+created: function () {
+    window.addEventListener('scroll', this.handleScroll);
+},
+destroyed: function () {
+    window.removeEventListener('scroll', this.handleScroll);
+}}
 </script>
 
 <style>
