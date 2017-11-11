@@ -5,7 +5,7 @@
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
 
       <b-navbar-brand href="#">
-        <img src="./assets/logo-nav.jpg"/>
+        <img src="./assets/logo-nav-t.png"/>
       </b-navbar-brand>
 
       <b-collapse is-nav id="nav_collapse">
