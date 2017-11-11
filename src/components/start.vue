@@ -31,8 +31,14 @@
     </div>
     <div class="Our Music" id="our-music">
       <h1 class="wii-h">Our Music</h1>
-      <youtube :video-id="video_1"></youtube>
-      <youtube :video-id="video_2"></youtube>
+      <b-row>
+        <b-col>
+          <youtube :video-id="video_1"></youtube>
+        </b-col>
+        <b-col>
+          <youtube :video-id="video_2"></youtube>
+        </b-col>
+      </b-row>
     </div>
     <div class="social-media" id="social-media">
       <h1 class="wii-h">Social Media</h1>
