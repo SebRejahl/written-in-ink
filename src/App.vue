@@ -4,7 +4,7 @@
 
       <b-nav-toggle target="nav_collapse"></b-nav-toggle>
 
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         <img id="logo" src="./assets/logo-nav-t.png"/>
       </b-navbar-brand>
 
@@ -14,7 +14,6 @@
           <b-nav-item id="link" href="#upcoming-events">Upcoming Events</b-nav-item>
           <b-nav-item href="#our-music">Our Music</b-nav-item>
           <b-nav-item href="#social-media">Social Media</b-nav-item>
-          <b-nav-item href="#contact-us">Contact Us</b-nav-item>
         </b-nav>
       </b-collapse>
     </b-navbar>
