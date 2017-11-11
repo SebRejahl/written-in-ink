@@ -22,23 +22,42 @@
     </div>
     <div class="upcoming-events" id="upcoming-events">
       <h1 class="wii-h">Upcoming Events</h1>
-      <b-card  bg-variant="dark" text-variant="white" title="Card Title" class="event">
-        <p class="card-text">
-          With supporting text below as a natural lead-in to additional content.
-        </p>
-        <b-button href="#" variant="primary">Go somewhere</b-button>
-      </b-card>
+      <b-container fluid>
+        <b-row>
+          <b-col>
+            <b-card  bg-variant="dark" text-variant="white" title="The OLLIE Gig" class="event">
+              <img class="card-img" src="../assets/ollie.jpg"/>
+              <p class="card-text">24 November at 18:00–21:00</p>
+              <p class="card-text">The Pioneer Club, Heathlands Drive</p>
+              <p class="card-text">AL3 5AY Saint Albans</p>
+              <b-button href="https://www.facebook.com/events/290727604749582/" class="wii-button">More Info...</b-button>
+            </b-card>
+          </b-col>
+          <b-col>
+            <b-card  bg-variant="dark" text-variant="white" title="Funkin' For Fundin' - Animal Welfare" class="event">
+              <img class="card-img" src="../assets/fff.jpg"/>
+              <p class="card-text">9 December at 19:30–23:55</p>
+              <p class="card-text">5 The Rise, Park St</p>
+              <p class="card-text">AL2 2NT London, United Kingdom</p>
+              <b-button href="https://www.facebook.com/events/137651613528899/" class="wii-button">More Info...</b-button>
+              <b-button href="https://www.musicglue.com/funkin-for-fundraisin/events/2017-12-09-funkin-for-fundraisin-1-animal-welfare-park-street-village-hall" class="wii-button">Tickets...</b-button>
+            </b-card>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
     <div class="Our Music" id="our-music">
       <h1 class="wii-h">Our Music</h1>
-      <b-row>
-        <b-col>
-          <youtube :video-id="video_1"></youtube>
-        </b-col>
-        <b-col>
-          <youtube :video-id="video_2"></youtube>
-        </b-col>
-      </b-row>
+      <b-container fluid>
+        <b-row>
+          <b-col>
+            <youtube :video-id="video_1" class="wii-video" player-width="600"></youtube>
+          </b-col>
+          <b-col>
+            <youtube :video-id="video_2" class="wii-video" player-width="600"></youtube>
+          </b-col>
+        </b-row>
+      </b-container>
     </div>
     <div class="social-media" id="social-media">
       <h1 class="wii-h">Social Media</h1>
@@ -76,6 +95,25 @@ export default {
     },
     onSlideEnd: function() {
 
+    },
+    ready (player) {
+          this.player = player
+        },
+    playing (player) {
+      // The player is playing a video.
+    },
+    change () {
+      // when you change the value, the player will also change.
+      // If you would like to change `playerVars`, please change it before you change `videoId`.
+      // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
+      // If `playerVars.autoplay` is 0, `cueVideoById` will be called.
+      this.videoId = 'another video id'
+    },
+    stop () {
+      this.player.stopVideo()
+    },
+    pause () {
+      this.player.pauseVideo()
     }
   }
 }
@@ -83,11 +121,22 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.card-img {
+  width: auto;
+  height: 75px;
+  margin-bottom: 30px;
+}
 .wii-h {
   margin-top: 50px;
-  margin-bottom: 50px;
   font-family: 'Permanent Marker', cursive;
   color: black;
+}
+.wii-button {
+  background-color: #a21919;
+  color: white;
+  border-radius: 0px;
+  width: 120px;
+  font-size: 12px;
 }
 h1, h2 {
   font-weight: normal;
@@ -128,11 +177,15 @@ a {
 }
 
 .upcoming-events {
-  text-align: center;
-  display: inline-block;
 }
 
 .event {
+  margin-top: 50px;
+  border-radius: 0px;
+}
+
+.wii-video {
+  margin-top: 50px;
 }
 
 </style>
