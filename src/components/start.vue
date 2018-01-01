@@ -25,22 +25,13 @@
       <b-container fluid>
         <b-row>
           <b-col>
-            <b-card  bg-variant="dark" text-variant="white" title="The OLLIE Gig" class="event">
-              <img class="card-img" src="../assets/ollie.jpg"/>
-              <p class="card-text">24 November at 18:00–21:00</p>
-              <p class="card-text">The Pioneer Club, Heathlands Drive</p>
-              <p class="card-text">AL3 5AY Saint Albans</p>
-              <b-button href="https://www.facebook.com/events/290727604749582/" class="wii-button">More Info...</b-button>
-            </b-card>
-          </b-col>
-          <b-col>
-            <b-card  bg-variant="dark" text-variant="white" title="Funkin' For Fundin' - Animal Welfare" class="event">
-              <img class="card-img" src="../assets/fff.jpg"/>
-              <p class="card-text">9 December at 19:30–23:55</p>
-              <p class="card-text">5 The Rise, Park St</p>
-              <p class="card-text">AL2 2NT London, United Kingdom</p>
-              <b-button href="https://www.facebook.com/events/137651613528899/" class="wii-button">More Info...</b-button>
-              <b-button href="https://www.musicglue.com/funkin-for-fundraisin/events/2017-12-09-funkin-for-fundraisin-1-animal-welfare-park-street-village-hall" class="wii-button">Tickets...</b-button>
+            <b-card  bg-variant="dark" text-variant="white" title="Battle of The Bands" class="event">
+              <img class="card-img" src="../assets/battleofthebands.jpg"/>
+              <p class="card-text">6 February at 20:00–23:00</p>
+              <p class="card-text">The Horn, Victoria Street</p>
+              <p class="card-text">AL1 3TE Saint Albans</p>
+              <b-button href="https://www.facebook.com/events/132644037444988/" class="wii-button">More Info...</b-button>
+              <b-button href="https://www.ticketweb.uk/event/battle-of-the-bands-the-horn-tickets/7769585?pl=horn" class="wii-button">Tickets...</b-button>
             </b-card>
           </b-col>
         </b-row>
@@ -48,6 +39,11 @@
     </div>
     <div class="Our Music" id="our-music">
       <h1 class="wii-h">Our Music</h1>
+      <h2 class="wii-h">Our new EP is out!</h2>
+      <iframe width="75%" height="500" scrolling="no" frameborder="no"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/401051450&amp;color=%23ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true">
+      </iframe>
+      <h2 class="wii-h">Live tracks</h2>
       <b-container fluid>
         <b-row>
           <b-col>
@@ -123,7 +119,7 @@ export default {
 <style scoped>
 .card-img {
   width: auto;
-  height: 75px;
+  height: 300px;
   margin-bottom: 30px;
 }
 .wii-h {
